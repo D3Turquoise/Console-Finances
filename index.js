@@ -87,3 +87,63 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+
+console.log(finances.length)
+
+// var totalAmount = 0;
+
+// for(i = 0; i < finances.length; i++){
+//     console.log("i = " + i);
+//     console.log(finances[i][1])
+//     totalAmount = totalAmount + finances[i][1]
+// }
+
+// console.log(totalAmount)
+
+var totalAmount = 0
+for (var i = 0; i < finances.length; i++) {
+    console.log(finances[i][1])
+    console.log("at the moment, total amount equals ", totalAmount)
+    totalAmount = totalAmount + finances[i][1] 
+    console.log("now, total amount equals ", totalAmount)
+}
+
+console.log("totalAmount; ", totalAmount)
+
+var financeChanges=[]
+
+for(i = 1; i < finances.length; i++){
+    var firstNum = finances[i-1][1]
+    var secondNum = finances[i][1]
+
+    var change = Math.abs(firstNum - secondNum)
+
+    console.log(firstNum)
+    console.log(secondNum)
+    console.log(change)
+    console.log("===========")
+    financeChanges.push(change)
+}
+
+var totalChanges = 0
+
+for (i = 0; i < financeChanges.length; i++) {
+ console.log (financeChanges[i])
+ totalChanges=totalChanges + financeChanges[i]
+}
+
+console.log("totalChanges;", totalChanges)
+
+var AverageChange = totalChanges / financeChanges.length
+console.log ("AverageChange;", AverageChange)
+
+var highestEarning = 0
+
+for (i = 0; i < financeChanges.length; i++) {
+    console.log (financeChanges[i])
+    if (financeChanges[i] = highestEarning)
+}
+
+
+
+
